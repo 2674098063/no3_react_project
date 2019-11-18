@@ -1,0 +1,47 @@
+@import '~antd/dist/antd.css';
+
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+:global(.submenu) {
+  height: 100%;
+  min-height: 640px;
+}
+
+:global(.logo) {
+  float: left;
+  font-size: 36px;
+  font-family: 'Microsoft YaHei';
+  margin-right: 50px;
+  height: 100%;
+  color: #fff;
+}
+
+:global(.inf_table) {
+  width: 100%;
+}
+
+:global(.inf_header) {
+  position: relative;
+  text-align: center;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+:global(.inf_photo) {
+  width: 180px;
+  height: 200px;
+}
+
+.example-input .ant-input {
+  max-width: 120px;
+  min-width: 100px;
+  margin: 0 8px 8px 0;
+}
+
+:global(.ant-select-arrow) {
+  display: none !important;
+}

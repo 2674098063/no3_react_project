@@ -1,0 +1,77 @@
+.inf_table {
+  width: 100%;
+  border: 1px solid #496280;
+}
+.inf_table .inf_mian {
+  width: 70%;
+  float: left;
+}
+.inf_table .inf_mian .inf_text {
+  float: left;
+  width: 50%;
+  min-width: 320px;
+}
+.inf_table .inf_mian .inf_text .text_inf {
+  text-align: left;
+  padding: 5px;
+  min-width: 160px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.inf_table .inf_mian .inf_text .text_inf span {
+  display: inline-block;
+  min-width: 100px;
+}
+.inf_table .inf_mian .inf_text .text_inf span:first-child {
+  text-align: right;
+}
+.inf_table .inf_img {
+  width: 30%;
+  float: left;
+  min-width: 180px;
+  text-align: center;
+}
+.inf_table .inf_img img {
+  margin-top: 30px;
+}
+.inf_table .inf_more {
+  font-size: 16px;
+  font-weight: 600;
+  background: #e2e3e6;
+  float: left;
+  width: 100%;
+}
+.inf_table .inf_more .inf_text {
+  float: left;
+  width: 30%;
+  min-width: 320px;
+}
+.inf_table .inf_more .inf_text .text_inf {
+  text-align: left;
+  padding: 5px;
+  min-width: 160px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.inf_table .inf_more .inf_text .text_inf span {
+  display: inline-block;
+  min-width: 100px;
+}
+.inf_table .inf_more .inf_text .text_inf span:first-child {
+  text-align: right;
+}
+.ant_input {
+  max-width: 180px;
+  min-width: 100px;
+}
+.select {
+  max-width: 180px;
+  min-width: 100px;
+}
+.modify {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

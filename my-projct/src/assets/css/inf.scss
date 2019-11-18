@@ -1,0 +1,94 @@
+.inf_table {
+    width: 100%;
+    border: 1px solid rgb(73, 98, 128);
+
+    .inf_mian {
+        width: 70%;
+        float: left;
+
+        .inf_text {
+            float: left;
+            width: 50%;
+            min-width: 320px;
+
+            .text_inf {
+                text-align: left;
+                padding: 5px;
+                min-width: 160px;
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 600;
+
+                span {
+                    display: inline-block;
+                    min-width: 100px;
+
+                    &:first-child {
+                        text-align: right;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .inf_img {
+        width: 30%;
+        float: left;
+        min-width: 180px;
+        text-align: center;
+
+        img {
+            margin-top: 30px;
+        }
+    }
+
+    .inf_more {
+        font-size: 16px;
+        font-weight: 600;
+        background: #e2e3e6;
+        float: left;
+        width: 100%;
+
+        .inf_text {
+            float: left;
+            width: 30%;
+            min-width: 320px;
+
+            .text_inf {
+                text-align: left;
+                padding: 5px;
+                min-width: 160px;
+                margin-top: 10px;
+                font-size: 16px;
+                font-weight: 600;
+
+                span {
+                    display: inline-block;
+                    min-width: 100px;
+
+                    &:first-child {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ant_input {
+    max-width: 180px;
+    min-width: 100px;
+}
+
+.select {
+    max-width: 180px;
+    min-width: 100px;
+}
+
+.modify {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
