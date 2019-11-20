@@ -50,6 +50,22 @@ router.post('/stu_setbasic', upload.array(), async function (req, res, next) {
   res.json(0)
 });
 
+router.post('/stu', upload.array(), async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let obj = req.body;
+  let data = await find('stu', { ...obj })
+  if (data.length) {
+    res.json({ data, isLogin: true })
+  } else {
+    res.json({ isLogin: false })
+  }
+})
+
+router.post('/setpsw', upload.array(), async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let obj = req.body;
+  await updata('stu', { stu_id: obj.stu_id }, { stu_psw: obj.stu_psw })
+})
 
 router.get('/attendance', upload.array(), async function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -65,6 +81,7 @@ router.get('/attendance', upload.array(), async function (req, res, next) {
   await insert('attendance', [{ ...data }])
   res.send('1')
 });
+
 router.get('/setattendance', async function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   let src = req.originalUrl;
@@ -76,6 +93,7 @@ router.get('/setattendance', async function (req, res, next) {
   })
   res.json(data)
 });
+
 router.get('/stu_statu', async function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   let src = req.originalUrl;
@@ -88,12 +106,14 @@ router.get('/stu_statu', async function (req, res, next) {
   console.log(data)
   res.json(data)
 });
+
 router.get('/obtain_rew', async function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   let data = await find('obtain_rew');
   console.log(data)
   res.json(data)
 });
+
 router.get('/obtain_pun', async function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   let data = await find('obtain_pun');
@@ -101,5 +121,16 @@ router.get('/obtain_pun', async function (req, res, next) {
   res.json(data)
 });
 
-
+router.get('/testTime', async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let src = req.originalUrl;
+  src = src.split('?');
+  let arr = src[1].split('=');
+  console.log(decodeURI(arr[1]))
+  let data = await find('testTime', {
+    stu_class: decodeURI(arr[1])
+  });
+  console.log(data)
+  res.json(data)
+});
 module.exports = router;

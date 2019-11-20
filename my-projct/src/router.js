@@ -6,6 +6,8 @@ import Head from './components/Head/Head';
 import Information from './routes/Information/Information'
 import Business from './routes/Business/Business'
 import Score from './routes/Score/Score'
+import Login from './routes/Login/index.jsx'
+// import cookie from './cookie'
 // const { SubMenu } = Menu;
 // const { Content, Sider } = Layout;
 
@@ -13,21 +15,29 @@ import Score from './routes/Score/Score'
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
-      <Layout>
-        <Head />
-        <Switch>
-          <Route path="/information">
-            <Information />
-          </Route>
-          <Route path="/business">
-            <Business />
-          </Route>
-          <Route path="/score">
-            <Score />
-          </Route>
-          <Redirect path="/" to="/information" />
-        </Switch>
-      </Layout>
+      <Switch>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/main">
+
+          <Layout>
+            <Head />
+            <Switch>
+              <Route path="/main/information">
+                <Information />
+              </Route>
+              <Route path="/main/business">
+                <Business />
+              </Route>
+              <Route path="/main/score">
+                <Score />
+              </Route>
+            </Switch>
+          </Layout>
+        </Route>
+        <Redirect path="/" to="/login" />
+      </Switch>
     </Router>
   );
 }

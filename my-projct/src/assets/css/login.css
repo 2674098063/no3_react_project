@@ -1,0 +1,19 @@
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/bg1.5ea94ef.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+.login_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 15px;
+  padding: 64px;
+}
+.login_box .login_header {
+  font-size: 24px;
+  text-align: center;
+}

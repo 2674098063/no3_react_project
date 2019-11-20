@@ -35,12 +35,20 @@ const delSession = (key) => {
     window.sessionStorage.removeItem(key)
 }
 
+const delallcookie = function clearAllCookie() {
+    var keys = document.cookie.match(/[^ =;]+(?=\=)/g);
+    if (keys) {
+        for (var i = keys.length; i--;)
+            document.cookie = keys[i] + '=0;expires=' + new Date(0).toUTCString()
+    }
+}
 const cookie = {
     getCookie,
     setCookie,
     deletCookie,
     getSession,
     setSession,
-    delSession
+    delSession,
+    delallcookie
 }
 export default cookie

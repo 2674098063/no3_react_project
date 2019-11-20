@@ -6,6 +6,7 @@ import axios from 'axios'
 import { Collapse, Button, Form, Input, Select, notification, DatePicker } from 'antd';
 import moment from 'moment';
 import qs from "qs";
+import cookie from '../../cookie'
 // const { MonthPicker, RangePicker } = DatePicker;
 const Panel = Collapse.Panel;
 const Option = Select.Option;
@@ -28,7 +29,8 @@ export default class Basic extends React.Component {
         }
     }
     async loadBasic() {
-        await axios.get('http://localhost:3000/stu_basic?stu=20160206').then(({ data }) => {
+        let mystu_id = cookie.getCookie('stu_id')
+        await axios.get(`http://localhost:3000/stu_basic?stu=${mystu_id}`).then(({ data }) => {
             window.sessionStorage.setItem('stuBasic', JSON.stringify(data[0]))
             this.setState({
                 stuBasic: data[0]

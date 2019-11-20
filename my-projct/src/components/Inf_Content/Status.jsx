@@ -38,8 +38,8 @@ export default class Status extends React.Component {
                             :
                             {/* <span>2016</span> */}
                             <Input
-                                value={this.state.statu.grade}
-                                id="stu_id"
+                                value={this.state.statu.stu_class}
+                                id="stu_class"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -52,7 +52,7 @@ export default class Status extends React.Component {
                             {/* <span>电气与计算机工程系</span> */}
                             <Input
                                 value={this.state.statu.college}
-                                id="stu_id"
+                                id="college"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -65,7 +65,7 @@ export default class Status extends React.Component {
                             {/* <span>计算机科学与技术（软件工程方向）</span> */}
                             <Input
                                 value={this.state.statu.professional}
-                                id="stu_id"
+                                id="professional"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -78,7 +78,7 @@ export default class Status extends React.Component {
                             {/* <span>计软161</span> */}
                             <Input
                                 value={this.state.statu.stu_class}
-                                id="stu_id"
+                                id="stu_class"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -91,7 +91,7 @@ export default class Status extends React.Component {
                             {/* <span>4</span> */}
                             <Input
                                 value={this.state.statu.academic}
-                                id="stu_id"
+                                id="academic"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -104,7 +104,7 @@ export default class Status extends React.Component {
                             {/* <span>在读</span> */}
                             <Input
                                 value={this.state.statu.status}
-                                id="stu_id"
+                                id="statu"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -117,7 +117,7 @@ export default class Status extends React.Component {
                             {/* <span>是</span> */}
                             <Input
                                 value={this.state.statu.istrue}
-                                id="stu_id"
+                                id="istrue"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -129,7 +129,7 @@ export default class Status extends React.Component {
                             :
                             <Input
                                 value={this.state.statu.registered}
-                                id="stu_id"
+                                id="registered"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -141,7 +141,7 @@ export default class Status extends React.Component {
                             :
                             <Input
                                 value={this.state.statu.whyreg}
-                                id="stu_id"
+                                id="whyreg"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -154,7 +154,7 @@ export default class Status extends React.Component {
                             {/* <span>3</span> */}
                             <Input
                                 value={this.state.statu.level}
-                                id="stu_id"
+                                id="level"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -167,7 +167,7 @@ export default class Status extends React.Component {
                             {/* <span>国家任务</span> */}
                             <Input
                                 value={this.state.statu.way}
-                                id="stu_id"
+                                id="way"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -180,7 +180,7 @@ export default class Status extends React.Component {
                             {/* <span>本科</span> */}
                             <Input
                                 value={this.state.statu.cultivate}
-                                id="stu_id"
+                                id="cultivate"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -193,7 +193,7 @@ export default class Status extends React.Component {
                             {/* <span>普通本科生</span> */}
                             <Input
                                 value={this.state.statu.category}
-                                id="stu_id"
+                                id="category"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -206,7 +206,7 @@ export default class Status extends React.Component {
                             {/* <span>计算机科学与技术（软件工程方向）</span> */}
                             <Input
                                 value={this.state.statu.admissions}
-                                id="stu_id"
+                                id="admissions"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -219,7 +219,7 @@ export default class Status extends React.Component {
                             {/* <span>2016</span> */}
                             <Input
                                 value={this.state.statu.year}
-                                id="stu_id"
+                                id="year"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import { Route, Switch, Redirect, Link } from 'dva/router';
+import { Route, Switch, Link } from 'dva/router';
+import { Redirect, } from 'dva/router';
 
 import Basic from '../../components/Inf_Content/Basic'
 import Status from '../../components/Inf_Content/Status'
@@ -19,7 +20,7 @@ export default class Information extends React.Component {
     }
     state = {
         head: '',
-        nav: ''
+        nav: '',
     }
     componentDidMount() {
         this.laod();
@@ -84,14 +85,14 @@ export default class Information extends React.Component {
                         style={{ minHeight: '90vh', borderRight: 0, height: '90vh' }}
                     >
                         <SubMenu key="sub1" title={<span><Icon type="user" />个人信息</span>}>
-                            <Menu.Item key="1"><Link to="/information/basic">基本信息</Link></Menu.Item>
-                            <Menu.Item key="2"><Link to="/information/status">学籍信息</Link></Menu.Item>
-                            <Menu.Item key="3"><Link to="/information/attendance">考勤</Link></Menu.Item>
-                            <Menu.Item key="4"><Link to="/information/obtain">奖惩</Link></Menu.Item>
+                            <Menu.Item key="1"><Link to="/main/information/basic">基本信息</Link></Menu.Item>
+                            <Menu.Item key="2"><Link to="/main/information/status">学籍信息</Link></Menu.Item>
+                            <Menu.Item key="3"><Link to="/main/information/attendance">考勤</Link></Menu.Item>
+                            <Menu.Item key="4"><Link to="/main/information/obtain">奖惩</Link></Menu.Item>
                         </SubMenu>
                         <SubMenu key="sub2" title={<span><Icon type="laptop" />课程</span>}>
-                            <Menu.Item key="5"><Link to="/information/schedule">个人课表</Link></Menu.Item>
-                            <Menu.Item key="8"><Link to="/information/test_time">考试时间</Link></Menu.Item>
+                            <Menu.Item key="5"><Link to="/main/information/schedule">个人课表</Link></Menu.Item>
+                            <Menu.Item key="8"><Link to="/main/information/test_time">考试时间</Link></Menu.Item>
                         </SubMenu>
                     </Menu>
                 </Sider>
@@ -103,25 +104,25 @@ export default class Information extends React.Component {
                     </Breadcrumb>
                     <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280, position: 'relative' }}>
                         <Switch>
-                            <Route path="/information/basic">
+                            <Route path="/main/information/basic">
                                 <Basic />
                             </Route>
-                            <Route path="/information/status">
+                            <Route path="/main/information/status">
                                 <Status />
                             </Route>
-                            <Route path="/information/attendance">
+                            <Route path="/main/information/attendance">
                                 <Attendance />
                             </Route>
-                            <Route path="/information/obtain">
+                            <Route path="/main/information/obtain">
                                 <Obtain />
                             </Route>
-                            <Route path="/information/schedule">
+                            <Route path="/main/information/schedule">
                                 <Schedule />
                             </Route>
-                            <Route path="/information/test_time">
+                            <Route path="/main/information/test_time">
                                 <TestTime />
                             </Route>
-                            <Redirect path="/information" to="/information/basic" />
+                            <Redirect path="/main/information" to="/main/information/basic" />
                         </Switch>
                     </Content>
                 </Layout>

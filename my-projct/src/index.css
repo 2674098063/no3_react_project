@@ -45,3 +45,15 @@ body,
 :global(.ant-select-arrow) {
   display: none !important;
 }
+
+:global(.login-form) {
+  max-width: 300px;
+}
+
+:global(.login-form-forgot) {
+  float: right;
+}
+
+:global(.login-form-button) {
+  width: 100%;
+}
