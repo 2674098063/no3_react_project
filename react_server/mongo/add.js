@@ -6,24 +6,24 @@ const {
     finds
 } = require('../mongo/index');
 
-insert('stu_basic', [{
-    stu_id: 20160206,
-    stu_name: '张焜博',
-    stu_gender: '男',
-    stu_stupinyin: 'zhangkunbo',
-    stu_cardType: '居民身份证',
-    stu_cardId: '45048119970206221X',
-    stu_race: '汉族',
-    stu_identity: '中国共产主义青年团团员',
-    stu_birthday: '1997-2-6',
-    stu_place: '广西',
-    econtact: '841997517',
-    stu_class: '计软161',
-    stu_moment: '梁聪',
-    admission: '2016-9-11',
-    dormitory: '10-354',
-    dormitory_num: '4',
-    blood_type: '',
-    height: '170cm',
-    weight: '49kg'
+insert('obtain_pun', [{
+    key: '1',
+    name: '张焜博',
+    disciplinary_time: '2016-9-1',
+    disciplinary_name: '留校察看',
+    discipline_type: '',
+    discipline_time: '',
+    undisciplinary_time: '2016-9-1',
+    undisciplinary_why: 'test-测试',
+    undisciplinary_num: '10001'
+}, {
+    key: '2',
+    name: '张焜博',
+    disciplinary_time: '',
+    disciplinary_name: '',
+    discipline_type: '测试',
+    discipline_time: '2030-3-3',
+    undisciplinary_time: '',
+    undisciplinary_why: '',
+    undisciplinary_num: ''
 }])

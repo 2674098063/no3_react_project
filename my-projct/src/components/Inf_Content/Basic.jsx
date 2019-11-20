@@ -17,7 +17,7 @@ export default class Basic extends React.Component {
         btntype: true,
         stuBasic: {}
     }
-    async componentDidMount() {
+    componentDidMount() {
         let basic = window.sessionStorage.getItem('stuBasic');
         if (!basic) {
             this.loadBasic()
@@ -44,6 +44,7 @@ export default class Basic extends React.Component {
     modify() {
         if (!this.state.btntype) {
             this.upload();
+            window.sessionStorage.setItem('stuBasic', JSON.stringify(this.state.stuBasic))
         }
         this.setState({
             btntype: !this.state.btntype,
@@ -69,7 +70,7 @@ export default class Basic extends React.Component {
 
     stuCarIdBlur(e) {
         // console.log(e.target.value)
-        if (this.state.stuBasic.stu_cardType == '居民身份证') {
+        if (this.state.stuBasic.stu_cardType === '居民身份证') {
             var reg = /^(\d{17}|\d{14})[\dxX]$/;
             let cardId = reg.test(e.target.value.trim());
             if (!cardId) {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import { Router, Route, Switch, Redirect, Link } from 'dva/router';
+import { Route, Switch, Redirect, Link } from 'dva/router';
 
 import Basic from '../../components/Inf_Content/Basic'
 import Status from '../../components/Inf_Content/Status'
@@ -81,7 +81,7 @@ export default class Information extends React.Component {
                         mode="inline"
                         defaultSelectedKeys={['1']}
                         defaultOpenKeys={['sub1']}
-                        style={{ height: '100%', borderRight: 0 }}
+                        style={{ minHeight: '90vh', borderRight: 0, height: '90vh' }}
                     >
                         <SubMenu key="sub1" title={<span><Icon type="user" />个人信息</span>}>
                             <Menu.Item key="1"><Link to="/information/basic">基本信息</Link></Menu.Item>

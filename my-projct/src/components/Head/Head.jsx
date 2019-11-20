@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, Dropdown, Button, Icon, message } from 'antd';
+import { Layout, Menu, Dropdown, Icon, message } from 'antd';
 import { Link } from 'dva/router';
 import style from '../../assets/css/head.css'
 const { Header } = Layout;

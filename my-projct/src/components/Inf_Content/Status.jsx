@@ -2,34 +2,35 @@ import React from 'react'
 import styles from '../../assets/css/statu.css'
 import stylep from '../../assets/css/base.css'
 import { Input } from 'antd';
+import axios from 'axios'
+import cookie from '../../cookie'
 
 export default class Status extends React.Component {
     state = {
-        statu: {
-            grade: '2016',
-            college: '电气与计算机工程系',
-            professional: '计算机科学与技术（软件工程方向）',
-            stu_class: '计软161',
-            academic: '4',
-            status: '在读',
-            istrue: '是',
-            registered: '已注册',
-            whyreg: '',
-            level: '3',
-            way: '国家任务',
-            cultivate: '本科',
-            category: '普通本科',
-            admissions: '计算机科学与技术（软件工程方向）',
-            year: '2016'
-        }
+        statu: {}
     }
     componentDidMount() {
+        let id = cookie.getCookie('stu_id');
+        let statu = cookie.getSession('_statu')
+        if (!statu) {
+            this.loadStatu(id);
+        } else {
+            this.setState({ statu: JSON.parse(statu) })
+        }
+    }
 
+    async loadStatu(id) {
+        let path = `http://localhost:3000/stu_statu?stu_id=${id}`
+        axios.get(path).then(({ data }) => {
+            // console.log(data)
+            this.setState({ statu: data[0] })
+            cookie.setSession('_statu', JSON.stringify(data[0]))
+        })
     }
     render() {
         return (
             <>
-                <h3>学籍</h3>
+                <h3 className={`${styles.head}`}>学籍</h3>
                 <div className={`${styles.statu_main} ${stylep.clearfix}`}>
                     <div className={`${styles.statu_text}`}>
                         <p className={`${styles.text_statu}`}>

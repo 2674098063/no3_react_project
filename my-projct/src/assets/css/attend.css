@@ -1,0 +1,61 @@
+.ask_for_leave {
+  border-bottom: 1px solid #888;
+}
+.ask_for_leave .leave {
+  position: relative;
+}
+.ask_for_leave .leave .leave_head {
+  margin-bottom: 16px;
+}
+.ask_for_leave .leave .leave_head .box {
+  float: left;
+  margin-right: 40px;
+}
+.ask_for_leave .leave .leave_head .box > span {
+  margin: 0 12px;
+}
+.ask_for_leave .leave .leave_head .box > span:first-child {
+  text-align: right;
+  display: inline-block;
+  min-width: 80px;
+  margin-left: 0;
+  margin-right: 20px;
+}
+.ask_for_leave .leave .leave_head .box .ant_input {
+  max-width: 120px;
+}
+.ask_for_leave .leave .leave_head .box .hmtime {
+  margin: 0 10px;
+}
+.ask_for_leave .leave .whymiss {
+  margin-bottom: 22px;
+}
+.ask_for_leave .leave .whymiss > span {
+  float: left;
+  text-align: right;
+  display: block;
+  min-width: 80px;
+  margin-right: 20px;
+}
+.ask_for_leave .leave .whymiss .whyText {
+  float: left;
+  min-height: 120px !important;
+  max-height: 160px;
+  min-width: 500px;
+  max-width: 1000px;
+}
+.ask_for_leave .leave .leavebox_btn {
+  position: relative;
+  height: 36px;
+  margin-bottom: 10px;
+}
+.ask_for_leave .leave .leavebox_btn .leave_btn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+h4 {
+  margin: 5px 10px;
+  font-size: 24px;
+  font-weight: 600;
+}

@@ -45,10 +45,61 @@ router.post('/stu_setbasic', upload.array(), async function (req, res, next) {
       obk[i] = obj[i]
     }
   }
-
   console.log(obk)
   await updata('stu_basic', { stu_id: obj.stu_id }, { ...obk })
   res.json(0)
 });
+
+
+router.get('/attendance', upload.array(), async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let url = req.originalUrl;
+  url = url.split('?');
+  let str = url[1].split('&')
+  let data = {}
+  str.map(item => {
+    let arr = item.split('=')
+    data[arr[0]] = arr[1]
+  })
+  console.log(data)
+  await insert('attendance', [{ ...data }])
+  res.send('1')
+});
+router.get('/setattendance', async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let src = req.originalUrl;
+  src = src.split('?');
+  let arr = src[1].split('=');
+  console.log(arr[1])
+  let data = await find('attendance', {
+    stu_id: arr[1]
+  })
+  res.json(data)
+});
+router.get('/stu_statu', async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let src = req.originalUrl;
+  src = src.split('?');
+  let arr = src[1].split('=');
+  console.log(arr[1])
+  let data = await find('stu_statu', {
+    stu_id: arr[1]
+  });
+  console.log(data)
+  res.json(data)
+});
+router.get('/obtain_rew', async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let data = await find('obtain_rew');
+  console.log(data)
+  res.json(data)
+});
+router.get('/obtain_pun', async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let data = await find('obtain_pun');
+  console.log(data)
+  res.json(data)
+});
+
 
 module.exports = router;
