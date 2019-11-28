@@ -91,7 +91,7 @@ export default class Information extends React.Component {
                             <Menu.Item key="4"><Link to="/main/information/obtain">奖惩</Link></Menu.Item>
                         </SubMenu>
                         <SubMenu key="sub2" title={<span><Icon type="laptop" />课程</span>}>
-                            <Menu.Item key="5"><Link to="/main/information/schedule">个人课表</Link></Menu.Item>
+                            <Menu.Item key="5"><Link to="/main/information/schedule">课程阶段</Link></Menu.Item>
                             <Menu.Item key="8"><Link to="/main/information/test_time">考试时间</Link></Menu.Item>
                         </SubMenu>
                     </Menu>

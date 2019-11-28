@@ -3,11 +3,14 @@ import { Layout, Menu, Icon } from 'antd';
 import { Route, Switch, Link } from 'dva/router';
 import { Redirect, } from 'dva/router';
 import Choose from '../../components/Business_content/Choose'
+import Classroom from '../../components/Business_content/Classroom'
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
 
 
 export default class Business extends React.Component {
+    state = {}
+
     render() {
         return (
             <>
@@ -21,9 +24,8 @@ export default class Business extends React.Component {
                             style={{ minHeight: '90vh', borderRight: 0, height: '90vh' }}
                         >
                             <SubMenu key="sub1" title={<span><Icon type="book" />教务</span>}>
-                                <Menu.Item key="1"><Link to="/main/business">选课</Link></Menu.Item>
-                                <Menu.Item key="2"><Link to="/main/business">申请教室</Link></Menu.Item>
-                                <Menu.Item key="3"><Link to="/main/business">申请奖学金</Link></Menu.Item>
+                                <Menu.Item key="1"><Link to="/main/business/choose">选课</Link></Menu.Item>
+                                <Menu.Item key="2"><Link to="/main/business/classroom">申请教室</Link></Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Sider>
@@ -32,6 +34,9 @@ export default class Business extends React.Component {
                             <Switch>
                                 <Route path="/main/business/choose">
                                     <Choose />
+                                </Route>
+                                <Route path="/main/business/classroom">
+                                    <Classroom />
                                 </Route>
                                 <Redirect path="/main/business" to="/main/business/choose" />
                             </Switch>

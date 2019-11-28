@@ -1,0 +1,18 @@
+.ml_r {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mt {
+  margin-top: 10px;
+}
+.mb {
+  margin-bottom: 10px;
+}
+.input_size {
+  width: 100px;
+}
+.min {
+  display: inline-block;
+  min-width: 100px;
+  text-align: right;
+}

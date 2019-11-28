@@ -43,7 +43,7 @@ class NormalLoginForm extends React.Component {
                         }
                         let stu_id = cookie.getCookie('stu_id')
                         if (stu_id !== undefined) {
-                            window.location.href = 'http://localhost:8000/#/main/information/basic'
+                            window.location.href = 'http://localhost:8000/#/main'
                         }
                     } else {
                         openNotificationWithIcon('error');

@@ -7,12 +7,23 @@ import Information from './routes/Information/Information'
 import Business from './routes/Business/Business'
 import Score from './routes/Score/Score'
 import Login from './routes/Login/index.jsx'
-// import cookie from './cookie'
+import cookie from './cookie'
 // const { SubMenu } = Menu;
 // const { Content, Sider } = Layout;
 
 
+function loginState() {
+  let stu_id = cookie.getCookie('stu_id')
+  if (stu_id === undefined) {
+    window.location.href = 'http://localhost:8000/#/login'
+  }
+}
+
 function RouterConfig({ history }) {
+  loginState();
+  window.addEventListener('hashchange', () => {
+    loginState();
+  })
   return (
     <Router history={history}>
       <Switch>
@@ -20,7 +31,6 @@ function RouterConfig({ history }) {
           <Login />
         </Route>
         <Route path="/main">
-
           <Layout>
             <Head />
             <Switch>
@@ -33,6 +43,7 @@ function RouterConfig({ history }) {
               <Route path="/main/score">
                 <Score />
               </Route>
+              <Redirect path="/main" to="/main/information" />
             </Switch>
           </Layout>
         </Route>

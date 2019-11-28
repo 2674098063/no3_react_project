@@ -39,7 +39,7 @@ export default class Status extends React.Component {
                             {/* <span>2016</span> */}
                             <Input
                                 value={this.state.statu.stu_class}
-                                id="stu_class"
+                                id="stu_class_"
                                 disabled
                                 className={`${styles.ant_input}`}
                             />
@@ -230,5 +230,12 @@ export default class Status extends React.Component {
                 </div>
             </>
         )
+    }
+    componentWillUnmount() {
+        // 卸载异步操作设置状态
+        clearTimeout(this.timeouter)
+        this.setState = (state, callback) => {
+            return
+        }
     }
 }

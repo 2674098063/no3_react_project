@@ -72,4 +72,11 @@ export default class TestTime extends React.Component {
             </div>
         )
     }
+    componentWillUnmount() {
+        // 卸载异步操作设置状态
+        clearTimeout(this.timeouter)
+        this.setState = (state, callback) => {
+            return
+        }
+    }
 }

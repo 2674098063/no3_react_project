@@ -5,6 +5,9 @@ import styles from '../../assets/css/attend.css';
 import stylep from '../../assets/css/base.css';
 import cookie from '../../cookie';
 import axios from 'axios'
+
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 // import qs from "qs";
 const { TextArea } = Input;
 const format = 'HH:mm';
@@ -251,22 +254,25 @@ export default class Attendance extends React.Component {
                                 <span>请假时间 ：</span>
 
                                 <DatePicker
-
-
+                                    placeholder="开始日期"
+                                    locale='zh-cn'
                                     onChange={this.onChangeStart.bind(this)}
                                 />
                                 <TimePicker
                                     className={`${styles.hmtime}`}
                                     onChange={this.startHMTime.bind(this)}
                                     defaultValue={moment('00:00', format)}
+                                    id="start_time"
                                     format={format}
                                 />
                                 <span>至</span>
                                 <DatePicker
-
+                                    placeholder="结束日期"
+                                    locale='zh-cn'
                                     onChange={this.onChangeEnd.bind(this)}
                                 />
                                 <TimePicker
+                                    id="end_time"
                                     className={`${styles.hmtime}`}
                                     onChange={this.endHMTime.bind(this)}
                                     defaultValue={moment('00:00', format)}

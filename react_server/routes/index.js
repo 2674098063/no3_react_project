@@ -133,4 +133,36 @@ router.get('/testTime', async function (req, res, next) {
   console.log(data)
   res.json(data)
 });
+
+router.get('/getchoose', async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let data = await find('choose')
+  res.json(data)
+})
+router.get('/getMy_choose', async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let data = await find('my_choose')
+  res.json(data)
+})
+router.post('/setMy_choose', upload.array(), async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let obj = req.body;
+  await insert('my_choose', [{ ...obj }])
+  res.json(1)
+})
+router.post('/delMy_choose', upload.array(), async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let obj = req.body;
+  console.log(obj.stu_id, obj.key)
+  await remove('my_choose', { stu_id: obj.stu_id, key: obj.key })
+  res.json(1)
+})
+
+router.post('/results', upload.array(), async function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  let obj = req.body;
+  let data = await find('results', { ...obj })
+  res.json(data)
+})
+
 module.exports = router;
