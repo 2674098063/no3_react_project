@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5dd3a89bb7d53c54f064f6e3"},"startHM":"09:00","endHM":"21:00","stu_id":"20160206","stu_name":"%E5%BC%A0%E7%84%9C%E5%8D%9A","nowTime":"2019-11-19-16:31","startTime":"2019-09-02","endTime":"2019-09-03","reason":"%E8%80%83%E8%AF%95","director":"%E5%B7%B2%E5%90%8C%E6%84%8F","lecturer":"%E5%B7%B2%E5%90%8C%E6%84%8F"}
+{"_id":{"$oid":"5dd3acfeb7d53c54f064f6e4"},"startHM":"09:00","endHM":"21:00","stu_id":"20160206","stu_name":"%E5%BC%A0%E7%84%9C%E5%8D%9A","nowTime":"2019-11-19-16:50","startTime":"2019-11-19","endTime":"2019-11-30","reason":"%E7%8E%A9"}
